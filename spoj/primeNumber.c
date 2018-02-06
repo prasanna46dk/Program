@@ -24,8 +24,7 @@
 
     3
     5
-    
-    
+    reference: http://www.spoj.com/problems/PRIME1/
     This program should be done with squrt function.
 */
 

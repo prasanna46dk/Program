@@ -15,6 +15,7 @@ Output:
 2
 88
 
+reference: http://www.spoj.com/problems/TEST/
 */
 #include<stdio.h>
 int main (void)
