@@ -83,12 +83,26 @@ void postOrderIterative(tree *treeRoot)
 {
     stack *s=NULL;
     tree *tempTreeRoot=treeRoot;
-    while (True)
+    do 
     {
-        while(&s)
+        while(tempTreeRoot)
         {
+            if (tempTreeRoot->right)
+                push(&s, tempTreeRoot->right);
+            push(&s, tempTreeRoot);
+            tempTreeRoot=tempTreeRoot->left;
         }
-    }
+        tempTreeRoot=(tree*)pop(&s);
+        if (tempTreeRoot->right && top(stack)==tempTreeRoot->right) {
+            free(pop(stack));
+            push((void *) root);
+            tempTreeRoot=tempTreeRoot->right;
+        } else {
+            printf("%d",tempTreeRoot->data);
+            tempTreeRoot=NULL;
+        }
+    } while(s)
+    
 }
 
 void levelOrder(tree *treeRoot)
