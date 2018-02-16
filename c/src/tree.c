@@ -94,7 +94,7 @@ void postOrderIterative(tree *treeRoot)
         }
         tempTreeRoot=(tree*)pop(&s);
         if (tempTreeRoot->right && (tree *)top(&s)==tempTreeRoot->right) {
-            free(pop(&s));
+            pop(&s);
             push(&s, (void *)tempTreeRoot);
             tempTreeRoot=tempTreeRoot->right;
         } else {
