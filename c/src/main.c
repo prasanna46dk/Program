@@ -26,5 +26,7 @@ int main()
     printf("\n");
     levelOrder(myTree);
     printf("\n");
+    postOrderIterative(myTree);
+    printf("\n");
     return 0;
 }

@@ -22,6 +22,12 @@ void push(stack **s, void *data)
     }
 }
 
+void *top(stack **s)
+{
+    if (!*s)
+        return NULL;
+    return (*s)->data;
+}
 void *pop(stack **s)
 {
     void *data=NULL;
